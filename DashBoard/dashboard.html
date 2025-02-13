@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Dashboard</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .nav-button {
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #ff506e, #ff6a9e);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Love Dashboard ❤️</h1>
+    <div class="container">
+        <button class="nav-button" onclick="navigateTo('Our%20Relationship%20So%20Far/timer.html')">🌹 Our Relationship</button>
+        <button class="nav-button" onclick="navigateTo('page2.html')">💖 Page 2</button>
+        <button class="nav-button" onclick="navigateTo('page3.html')">✨ Page 3</button>
+    </div>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
