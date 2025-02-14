@@ -65,4 +65,4 @@ yes.addEventListener("click", () => {
   setTimeout(() => {
     vid.style.display = "none";
   }, 9000);
-}
+});
