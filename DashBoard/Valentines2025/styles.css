@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    background-color: #fff0f6;
+    font-family: 'Playfair Display', serif;
+    color: #4b004d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.letter-container {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* Initial hidden state */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Show when in view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #ff3366;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.closing {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    color: #ff6699;
+}

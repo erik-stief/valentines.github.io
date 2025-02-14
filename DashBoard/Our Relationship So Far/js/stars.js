@@ -123,19 +123,6 @@ MiniStar.prototype.update = function() {
     this.opacity -= 0.0001 * this.ttl
 }
 
-function creatMountainRange(mountainAmount, height, color){
-    for(let i = 0; i < mountainAmount; i++){
-        const mountainWidth = canvas.width / mountainAmount
-        c.beginPath()
-        c.moveTo(i * mountainWidth, canvas.height)
-        c.lineTo(i * mountainWidth + mountainWidth + 0.2*canvas.height, canvas.height)
-        c.lineTo(i * mountainWidth + mountainWidth / 2, canvas.height - height)
-        c.lineTo(i * mountainWidth - 0.2*canvas.height, canvas.height)
-        c.fillStyle = color
-        c.fill()
-        c.closePath()
-    }
-}
 
 // Implementation
 const backgroundGradient = c.createLinearGradient(0, 0, canvas.width, canvas.height)
@@ -172,11 +159,6 @@ function animate() {
         backgroundStar.draw()
     })
 
-    if(flag) creatMountainRange(1, canvas.height * 0.7, '#384551')
-    if(flag) creatMountainRange(2, canvas.height * 0.6, '#2B3843')
-    if(flag) creatMountainRange(3, canvas.height * 0.4, '#26333E')
-    c.fillStyle = '#182028'
-    c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight)
     stars.forEach((star, index) => {
         star.update();
         if(star.radius == 0){
