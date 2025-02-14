@@ -58,15 +58,11 @@ yes.addEventListener("click", () => {
   vid.style.display = "block";
   gif.src = "resources/idc.gif";
   text.innerHTML = "Knew it babe 😘";
-  yes.innerHTML = '<a href="openGift()">Open Your Gift</a>';
+  yes.innerHTML = '<a href="DashBoard/dashboard.html">Open Your Gift</a>';
   yes.style.height = "90%";
   yes.style.width = "96%";
   no.style.display = "none";
   setTimeout(() => {
     vid.style.display = "none";
   }, 9000);
-});
-
-function openGift() {
-  window.location.href = "DashBoard/dashboard.html";
 }
